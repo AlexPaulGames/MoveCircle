@@ -145,28 +145,28 @@
       }
 
 	  function JoinGroup(){
-		  bridge.send("VKWebAppJoinGroup", {"group_id": 211143508}).then(_info =>{
+		  vkBridge.send("VKWebAppJoinGroup", {"group_id": 211143508}).then(_info =>{
           console.log(_info);
 	  }
 
 	  function PostWall(){
-		  bridge.send("VKWebAppShowWallPostBox", {
+		  vkBridge.send("VKWebAppShowWallPostBox", {
 		"message": "Отличная игра, чтобы скоротать время!",
 		"attachments": "https://vk.com/app8096716_205468985"
 		});
 	  }
 
 	  function ShareLink(){
-		  bridge.send("VKWebAppShare", {"link": "vk.com/app8096716_205468985"});
+		  vkBridge.send("VKWebAppShare", {"link": "vk.com/app8096716_205468985"});
 	  }
 
 	  function AddToFavorites(){
-		  bridge.send("VKWebAppAddToFavorites").then(_info =>{
+		  vkBridge.send("VKWebAppAddToFavorites").then(_info =>{
           console.log(_info);
 	  }
 
 	  function InviteFriends(){
-		  bridge.send("VKWebAppShowInviteBox", {})
+		  vkBridge.send("VKWebAppShowInviteBox", {})
          .then(data => console.log(data.success))  
         .catch(error => console.log(error));
 	  }
